@@ -3,11 +3,14 @@ import CarouselComponent from '@/components/CarouselComponent.vue';
 import MoviesComponent from "@/components/MoviesComponent.vue"
 import { useFetch } from '@vueuse/core'
 import { useMovieStore } from "@/stores/movie"
-import { popularMoviesUrl } from '@/utils';
+import { getMoviesGenresUrl, popularMoviesUrl } from '@/utils';
+import { useGenreStore } from '@/stores/Genres';
+const {setGenres} = useGenreStore()
 const {setMovies} = useMovieStore()
 
-const { isFetching, error, data } = await useFetch(popularMoviesUrl).json()
-
+const { isFetching, error, data } = await useFetch(popularMoviesUrl()).json()
+const res = await useFetch(getMoviesGenresUrl()).json();
+setGenres(res.data.value.genres)
 if(data){
   setMovies(data.value.results)  
 }

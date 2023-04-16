@@ -13,6 +13,8 @@ const setMovies = (apiData:[]) =>{
   movies.value = apiData
 }
 const imageUrl = (baseUrl:string,poster_path:string) => `${baseUrl}${poster_path}`
-
-  return { movies, setMovies,imageUrl}
+const getMovies = () => {
+  return movies.value
+}
+  return { movies, setMovies,imageUrl,getMovies}
 })
