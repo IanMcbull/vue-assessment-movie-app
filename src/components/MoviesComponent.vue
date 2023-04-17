@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { useMovieStore } from '@/stores/movie'
-import ChipComponent from './ChipComponent.vue'
 import { useGenreStore } from '@/stores/Genres'
 const { getMovies, imageUrl } = useMovieStore()
 const { genres } = useGenreStore()
@@ -10,7 +9,6 @@ const { genres } = useGenreStore()
     <div class="flex flex-col gap-2 md:gap-4">
       <div class="flex gap-4 items-center">
         <div class="flex justify-between flex-wrap">
-          <!-- <ChipComponent :text="genre.name" v-for="genre in genres" :key="genre.id"/> -->
         </div>
       </div>
       <h2 class="font-bold text-xl md:text-2xl">{{ getMovies().slice(6).length }} Movies</h2>
