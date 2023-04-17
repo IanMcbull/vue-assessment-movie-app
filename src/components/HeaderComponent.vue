@@ -24,8 +24,6 @@ const submitHandler = async () => {
       setMovies(data.value.results)
       searchQuery.value = ''
     }
-  } else {
-    console.log('You need to provide a search value')
   }
 }
 </script>
