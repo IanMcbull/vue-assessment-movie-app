@@ -41,7 +41,7 @@ const submitHandler = async () => {
         v-model="searchQuery"
       />
       <i
-        class="fa-solid fa-magnifying-glass absolute text-gray-400 right-0 mr-4 text-xl hidden md:block"
+        class="fa-solid fa-magnifying-glass absolute text-gray-400 right-0 mr-4 text-xl hidden lg:block"
       ></i>
     </form>
     <div class="flex gap-4 items-center">
