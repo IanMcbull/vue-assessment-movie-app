@@ -7,7 +7,7 @@ export type movieShape = {
   title: string
   poster_path: string
   vote_average: number
-  overview?: string
+  overview: string
   popularity: string
   genre_ids: genreType[]
 }
